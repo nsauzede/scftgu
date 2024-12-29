@@ -8,6 +8,9 @@ include ${TOP_DIR}/common/vars.mak
 TARGETS=hello_world${EXE} datatypes${EXE}
 
 all  : ${TARGETS}
+	for t in $(TARGETS); do \
+	    LD_LIBRARY_PATH=$(LIB_DIRS) ./$$t; \
+	done
 
 hello_world.cpp : ../../../examples/ch2/hello_world.cpp
 	cp $< $@ 

@@ -16,13 +16,13 @@ int sc_main(int sc_argc,  char *sc_argv[]) {
         sc_bv<5> rd = "10101";
         sc_bv<3> func3 = 0;
         sc_bv<7> func7 = "0000000";
-        
+
         sc_bv<32> inst = opcode;
         inst.range(11,7) = rd;
         inst.range(24,20) = rs2;
-        
+
         sc_bv<1> all = inst.and_reduce();
-        
+
         sc_bv<7> mask = "000011";
         sc_bv<7> active = opcode & mask;
     }
@@ -37,10 +37,10 @@ int sc_main(int sc_argc,  char *sc_argv[]) {
         sc_lv<2> uninit;
         uninit[0] = sc_dt::SC_LOGIC_Z;
         uninit[1] = sc_dt::SC_LOGIC_X;
-        
+
         lv_active.range(3,2) = "00";
     }
-    
+
     // ints
     {
         sc_uint<24> rgb = 0xFF8040;
@@ -69,7 +69,7 @@ int sc_main(int sc_argc,  char *sc_argv[]) {
         printf("a=%s, c=%f\n", a.to_string().c_str(), (float) c);
 
     }
-    
+
 
     return 0;
 }

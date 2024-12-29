@@ -1,7 +1,10 @@
 SystemC study material, examples and exercises corrosponding to
 "System C From the Ground Up" second edition. Original code.
 
-Update submodules to get the systemc library (source).
+Update submodules to get the systemc library (source):
+---
+git submodule update --init --recursive
+---
 
 To build a library used by the examples:
 

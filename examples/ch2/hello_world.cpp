@@ -7,7 +7,7 @@ SC_MODULE(Hello_SystemC)  {
 
     SC_CTOR(Hello_SystemC) {
         SC_THREAD(main_thread);
-        
+
     }
 
     void main_thread(void) {
@@ -22,5 +22,5 @@ int sc_main(int sc_argc, char *sc_argv[]) {
 
     sc_start();
 
-    return 0;    
+    return 0;
 }
